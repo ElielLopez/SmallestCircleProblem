@@ -25,21 +25,6 @@ Point** generate(Point center,int R, size_t size){
 
 int main(){
 
-    //----------- tests ---------------
-//    Point a(3,5);
-//    Point b(5,7);
-//    calcDistance(a,b); //2.82
-//    createTwoPointCircle(a, b);
-//
-//    Point cPoint(4, 3);
-//    Point d(-10,-3);
-//    //calcDistance(c, a);
-//    calcDistance(cPoint, b);
-//    createTwoPointCircle(cPoint, b);
-//    isBigger(createTwoPointCircle(cPoint, b).center, d, createTwoPointCircle(cPoint, b).radius);
-
-
-    // -------------------------------
     srand (time(NULL));
     const size_t N=250;
     float R=10+rand()%1000;
@@ -51,7 +36,6 @@ int main(){
     Point** ps_copy=new Point*[N];
     for(size_t i=0;i<N;i++) {
         ps_copy[i] = new Point(ps[i]->x, ps[i]->y);
-        //cout<<ps_copy[i]->x<<"  "<<ps_copy[i]->y<<endl;
     }
 
     auto start = high_resolution_clock::now();
